@@ -117,7 +117,6 @@ public class Main {
 
 		int userInput = in.nextInt();
 		System.out.println(userInput);
-//		in.close();
 		
 		switch (userInput) {
 	        case 1:
@@ -140,7 +139,18 @@ public class Main {
 	}
 	
 	public static void displayPlayerInfo() {
-		System.out.println("displayPlayerInfo");
+				Stack<String> names = new Stack<String>();
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter first player name:");
+		String player1 = in.nextLine();
+		names.push(player1);
+		System.out.println("Please enter second player name:");
+		String player2 = in.next();
+		names.push(player2);
+		
+		for (String s: names) {
+			System.out.println(s);
+		}
 	}
 	
 	public static void displayLastThreeLoosers() {
@@ -154,8 +164,6 @@ public class Main {
 	public static void displayTopWinners() {
 		System.out.println("displayTopWinners");
 	}
-	
-	
 	
 	public static void playGame() {
 		System.out.println("playing");
