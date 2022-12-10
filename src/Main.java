@@ -117,25 +117,30 @@ public class Main {
 
 		int userInput = in.nextInt();
 		System.out.println(userInput);
+//		in.close();
 		
 		switch (userInput) {
-        case 1:
-            displayPlayerInfo();
-            break;
-        case 2:
-            playGame();
-            break;
-        case 3:
-            displayTopWinners();
-            break;
-        case 4:
-            displayLastThreeWinners();
-            break;
-        case 5:
-            displayLastThreeLoosers();
-            break;
+	        case 1:
+	            displayPlayerInfo();
+	            break;
+	        case 2:
+	            playGame();
+	            break;
+	        case 3:
+	            displayTopWinners();
+	            break;
+	        case 4:
+	            displayLastThreeWinners();
+	            break;
+	        case 5:
+	            displayLastThreeLoosers();
+	            break;
 		}
         
+	}
+	
+	public static void displayPlayerInfo() {
+		System.out.println("displayPlayerInfo");
 	}
 	
 	public static void displayLastThreeLoosers() {
@@ -150,9 +155,7 @@ public class Main {
 		System.out.println("displayTopWinners");
 	}
 	
-	public static void displayPlayerInfo() {
-		System.out.println("displayPlayerInfo");
-	}
+	
 	
 	public static void playGame() {
 		System.out.println("playing");
