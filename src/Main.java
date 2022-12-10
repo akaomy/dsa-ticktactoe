@@ -34,15 +34,7 @@ public class Main {
 		displayMenu(in);
 
 		
-//        board = new String[9];
-//        turn = "X";
-//        String winner = null;
-// 
-//        for (int a = 0; a < 9; a++) {
-//            board[a] = String.valueOf(a + 1);
-//        }
-// 
-//        printBoard();
+
 // 
 //        System.out.println(
 //            "X will play first. Enter a slot number to place X in:");
@@ -157,6 +149,21 @@ public class Main {
 		displayMenu(in);
 	}
 	
+	public static void playGame() {
+      board = new String[9];
+      turn = "X";
+      String winner = null;
+
+      for (int a = 0; a < 9; a++) {
+          board[a] = String.valueOf(a + 1);
+      }
+
+      printBoard();
+      
+    System.out.println("X will play first. Enter a slot number to place X in: ");
+
+	}
+	
 	public static void displayLastThreeLoosers() {
 		System.out.println("displayLastThreeLoosers");
 	}
@@ -169,9 +176,7 @@ public class Main {
 		System.out.println("displayTopWinners");
 	}
 	
-	public static void playGame() {
-		System.out.println("playing");
-	}
+	
 	
 	public static void printBoard() {
 		System.out.println("board:");
