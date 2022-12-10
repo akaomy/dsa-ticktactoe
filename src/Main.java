@@ -25,6 +25,8 @@ public class Main {
 	
 	static String[] board;
     static String turn;
+    // player 1: name and score
+    // player 2: name and score
     
     
 	public static void main(String[] args) {
@@ -120,7 +122,7 @@ public class Main {
 		
 		switch (userInput) {
 	        case 1:
-	            displayPlayerInfo();
+	        	enterPlayerInfo();
 	            break;
 	        case 2:
 	            playGame();
@@ -138,19 +140,21 @@ public class Main {
         
 	}
 	
-	public static void displayPlayerInfo() {
-				Stack<String> names = new Stack<String>();
+	public static void enterPlayerInfo() {
 		Scanner in = new Scanner(System.in);
+		
+		Queue<String> pl1 = new LinkedList<String>();
 		System.out.println("Please enter first player name:");
 		String player1 = in.nextLine();
-		names.push(player1);
+		pl1.add(player1);
+		
+		Queue<String> pl2 = new LinkedList<String>();
 		System.out.println("Please enter second player name:");
 		String player2 = in.next();
-		names.push(player2);
+		pl2.add(player2);
 		
-		for (String s: names) {
-			System.out.println(s);
-		}
+		// go back to menu
+		displayMenu(in);
 	}
 	
 	public static void displayLastThreeLoosers() {
