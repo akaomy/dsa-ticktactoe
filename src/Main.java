@@ -133,17 +133,34 @@ public class Main {
 	}
 	
 	public static void enterPlayerInfo() {
+		
 		Scanner in = new Scanner(System.in);
 		
-		Queue<String> pl1 = new LinkedList<String>();
-		System.out.println("Please enter first player name:");
-		String player1 = in.nextLine();
-		pl1.add(player1);
+		Queue<String> queue1 = new LinkedList<String>();
 		
-		Queue<String> pl2 = new LinkedList<String>();
+		System.out.println("Please enter first player name:");
+		String player1Name = in.nextLine();
+		
+		System.out.println("Please enter first player age:");
+		int player1Age = in.nextInt();
+
+		Player pl1 = new Player(player1Name, player1Age);
+		
+		queue1.add(player1Name);
+		
+		
+		Queue<String> queue2 = new LinkedList<String>();
+		
 		System.out.println("Please enter second player name:");
-		String player2 = in.next();
-		pl2.add(player2);
+		String player2Name = in.nextLine();
+		
+		System.out.println("Please enter second player age:");
+		int player2Age = in.nextInt();
+
+		Player pl2 = new Player(player1Name, player1Age);
+		
+		queue1.add(player1Name);
+		
 		
 		// go back to menu
 		displayMenu(in);
@@ -160,7 +177,7 @@ public class Main {
 
       printBoard();
       
-    System.out.println("X will play first. Enter a slot number to place X in: ");
+    System.out.println("player 1 will play first. Enter a slot number to place X in: ");
 
 	}
 	
