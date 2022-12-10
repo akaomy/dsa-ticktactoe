@@ -19,11 +19,11 @@ public class Player {
 		age = a;
 	}
 	
-	public static String getName() {
+	public String getName() {
 		return name;
 	}
 	
-	public static int getAge() {
+	public int getAge() {
 		return age;
 	}
 
