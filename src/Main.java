@@ -114,13 +114,15 @@ public class Main {
 		
 		System.out.println("Please enter first player name:");
 		String player1Name = in.nextLine();
+		
 		System.out.println("Please enter first player age:");
 		int player1Age = in.nextInt();
 
 		Player pl1 = new Player(player1Name, player1Age);
 		
 		queue1.add(pl1.getName());
-		
+        in.nextLine();
+
 		
 		Queue<String> queue2 = new LinkedList<String>();
 		
@@ -129,19 +131,20 @@ public class Main {
 		
 		System.out.println("Please enter second player age:");
 		int player2Age = in.nextInt();
+        in.nextLine();
+
 
 		Player pl2 = new Player(player2Name, player2Age);
 		
 		queue2.add(pl2.getName());
 		
 	
-		in.close();
+//		in.close();
 		// go back to menu
-//		displayMenu(in);
+		displayMenu();
 	}
 	
 	public static void playGame() {
-		
 		Scanner in = new Scanner(System.in);
         board = new String[9];
         turn = "X";
@@ -152,10 +155,10 @@ public class Main {
         }
  
         System.out.println("Welcome to 3x3 Tic Tac Toe.");
+        
         printBoard();
  
-        System.out.println(
-            "X will play first. Enter a slot number to place X in:");
+		System.out.println("X will play first. Enter a slot number to place X in:");
  
         while (winner == null) {
             int numInput;
