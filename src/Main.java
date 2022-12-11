@@ -41,12 +41,12 @@ public class Main {
             }
             //For X winner
             if (line.equals("XXX")) {
-                return "X";
+                return player1Name;
             }
              
             // For O winner
             else if (line.equals("OOO")) {
-                return "O";
+                return player2Name;
             }
         }
          
@@ -214,7 +214,7 @@ public class Main {
         else {
             System.out.println(
                 "Congratulations! " + winner
-                + "'s have won! Thanks for playing.");
+                + " have won! Thanks for playing.");
         }
       in.close();
 
