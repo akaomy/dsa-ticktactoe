@@ -4,6 +4,9 @@ public class Main {
 
 	static String[] board;
     static String turn;
+    static String player1Name;
+    static String player2Name;
+
     
     static String checkWinner()
     {
@@ -113,31 +116,30 @@ public class Main {
 		Queue<String> queue1 = new LinkedList<String>();
 		
 		System.out.println("Please enter first player name:");
-		String player1Name = in.nextLine();
+		String plName1 = in.nextLine();
 		
 		System.out.println("Please enter first player age:");
 		int player1Age = in.nextInt();
 
-		Player pl1 = new Player(player1Name, player1Age);
-		
-		queue1.add(pl1.getName());
+		Player pl1 = new Player(plName1, player1Age);
+		player1Name = pl1.getName();
+		queue1.add(player1Name);
         in.nextLine();
 
 		
 		Queue<String> queue2 = new LinkedList<String>();
 		
 		System.out.println("Please enter second player name:");
-		String player2Name = in.nextLine();
+		String plName2 = in.nextLine();
 		
 		System.out.println("Please enter second player age:");
 		int player2Age = in.nextInt();
+
+		Player pl2 = new Player(plName2, player2Age);
+		player2Name = pl2.getName();
+		queue2.add(player2Name);
         in.nextLine();
 
-
-		Player pl2 = new Player(player2Name, player2Age);
-		
-		queue2.add(pl2.getName());
-		
 	
 //		in.close();
 		// go back to menu
@@ -158,7 +160,8 @@ public class Main {
         
         printBoard();
  
-		System.out.println("X will play first. Enter a slot number to place X in:");
+		System.out.println(
+				player1Name + " will play first. Enter a slot number to place X in:");
  
         while (winner == null) {
             int numInput;
